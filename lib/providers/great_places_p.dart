@@ -1,7 +1,6 @@
 import 'dart:io';
 
 import 'package:flutter/foundation.dart';
-import 'package:great_places_app/models/place.dart';
 
 import '../models/place.dart';
 
