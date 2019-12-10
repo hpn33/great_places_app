@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/foundation.dart';
 
+
 import '../models/place.dart';
 import '../helper/db_helper.dart';
 
@@ -35,6 +36,7 @@ class GreatPlaces extends ChangeNotifier {
 
   Future<void> fetchAndSetPlace() async {
     final dataList = await DBHelper.getData('user_places');
+
     _items = dataList
         .map(
           (item) => Place(
@@ -45,6 +47,7 @@ class GreatPlaces extends ChangeNotifier {
           ),
         )
         .toList();
+
     notifyListeners();
   }
 }
